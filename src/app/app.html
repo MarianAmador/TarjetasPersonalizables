@@ -1,0 +1,73 @@
+<main class="pagina">
+
+  <h1 class="titulo">🐾 Mis Gatitos</h1>
+
+  <button class="btn-toggle" (click)="toggleFormulario()">
+    {{ mostrarFormulario ? '✕ Cancelar' : '+ Agregar gatito' }}
+  </button>
+
+  <div class="formulario" *ngIf="mostrarFormulario">
+
+    <div class="campo">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="nuevoGato.nombre" placeholder="Ej: Byulki" />
+    </div>
+
+    <div class="campo">
+      <label>Edad (años)</label>
+      <input type="number" [(ngModel)]="nuevoGato.edad" min="1" max="20" (input)="nuevoGato.edad = nuevoGato.edad > 20 ? 20 : nuevoGato.edad < 1 ? 1 : nuevoGato.edad" />
+    </div>
+
+    <div class="campo">
+      <label>Descripción</label>
+      <input type="text" [(ngModel)]="nuevoGato.descripcion" placeholder="Ej: Ama las siestas" />
+    </div>
+
+    <div class="campo">
+      <label>Badge</label>
+      <input type="text" [(ngModel)]="nuevoGato.badge" placeholder="Ej: Travieso" />
+    </div>
+
+    <div class="campo">
+      <label>Emoji</label>
+      <div class="emojis">
+        <button
+          *ngFor="let e of emojisDisponibles"
+          class="emoji-btn"
+          [class.seleccionado]="nuevoGato.emoji === e"
+          (click)="nuevoGato.emoji = e">
+          {{ e }}
+        </button>
+      </div>
+    </div>
+
+    <button class="btn-agregar" (click)="agregarGato()">
+      Guardar gatito 🐾
+    </button>
+
+  </div>
+
+  <div class="galeria">
+
+    <div class="tarjeta-wrap" *ngFor="let gato of gatos">
+      <app-tarjeta
+        [nombre]="gato.nombre"
+        [edad]="gato.edad"
+        [descripcion]="gato.descripcion"
+        [emoji]="gato.emoji"
+        [badge]="gato.badge"
+        [likes]="gato.likes"
+        (likeClick)="darLike(gato.id)">
+      </app-tarjeta>
+      <button class="btn-eliminar" (click)="eliminarGato(gato.id)">
+        ✕ Eliminar
+      </button>
+    </div>
+
+    <p class="vacio" *ngIf="gatos.length === 0">
+      Aún no hay gatitos. ¡Agrega el primero! 🐱
+    </p>
+
+  </div>
+
+</main>

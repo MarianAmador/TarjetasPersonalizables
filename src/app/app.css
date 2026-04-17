@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.pagina {
+  min-height: 100vh;
+  background: #f0f7f4;
+  padding: 40px 24px;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.titulo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #085041;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.formulario {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(15, 110, 86, 0.10);
+  padding: 28px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 4px solid #1D9E75;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0C447C;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.campo input {
+  border: 1px solid #9FE1CB;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+  transition: border 0.2s;
+  color: #085041;
+}
+
+.campo input:focus {
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.12);
+}
+
+.emojis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.emoji-btn {
+  font-size: 22px;
+  background: #f0f7f4;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.emoji-btn:hover {
+  background: #E1F5EE;
+}
+
+.emoji-btn.seleccionado {
+  border-color: #1D9E75;
+  background: #E1F5EE;
+}
+
+.btn-agregar {
+  background: linear-gradient(135deg, #1D9E75, #185FA5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 4px;
+}
+
+.btn-agregar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-agregar:active {
+  transform: scale(0.97);
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.tarjeta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: 1px solid #9FE1CB;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+  color: #0F6E56;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-eliminar:hover {
+  background: #E1F5EE;
+  border-color: #1D9E75;
+  color: #085041;
+}
+
+.vacio {
+  color: #0F6E56;
+  font-size: 15px;
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.btn-toggle {
+  background: linear-gradient(135deg, #1D9E75, #185FA5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-toggle:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-toggle:active {
+  transform: scale(0.97);
+}

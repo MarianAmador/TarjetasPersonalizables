@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:host {
+  font-family: 'Nunito', sans-serif;
+  display: block;
+}
+
+.cat-card {
+  width: 220px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 24px rgba(15, 110, 86, 0.12);
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  border-top: 4px solid #378ADD;
+}
+
+.cat-card:hover {
+  transform: translateY(-6px);
+}
+
+.cat-top {
+  padding: 24px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.paw-bg {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 22px;
+  opacity: 0.15;
+}
+
+.face-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E1F5EE;
+  border: 3px solid #9FE1CB;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: #B5D4F4;
+  color: #0C447C;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cat-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #085041;
+  margin: 0;
+}
+
+.cat-desc {
+  font-size: 12px;
+  color: #0F6E56;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cat-footer {
+  padding: 12px 16px 16px;
+  border-top: 1px solid #E1F5EE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.age-chip {
+  font-size: 12px;
+  font-weight: 600;
+  color: #185FA5;
+}
+
+.like-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #9FE1CB;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  background: transparent;
+  cursor: pointer;
+  color: #085041;
+  transition: all 0.15s ease;
+}
+
+.like-btn:hover {
+  background: #E1F5EE;
+  border-color: #1D9E75;
+}
+
+.like-btn:active {
+  transform: scale(0.95);
+}
+
+.heart {
+  font-size: 14px;
+  color: #1D9E75;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.like-btn:hover .heart {
+  transform: scale(1.35);
+}

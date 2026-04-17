@@ -1,0 +1,18 @@
+<div class="cat-card">
+  <div class="cat-top">
+    <span class="paw-bg">🐾</span>
+    <div class="face-circle">{{ emoji }}</div>
+    <span class="badge">{{ badge }}</span>
+    <h2 class="cat-name">{{ nombre }}</h2>
+    <p class="cat-desc">{{ descripcion }}</p>
+  </div>
+
+  
+  <div class="cat-footer">
+    <span class="age-chip">{{ edad }} año{{ edad > 1 ? 's' : '' }}</span>
+    <button class="like-btn" (click)="darLike()">
+      <span class="heart">♥</span>
+      {{ likes }} {{ etiquetaLikes }}
+    </button>
+  </div>
+</div>
